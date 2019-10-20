@@ -12,7 +12,7 @@ const checkBrackets = function (str) {
             let bracketCloseIndex = close.indexOf(symbol);
             if (bracketCloseIndex >= 0) {
                 let lastBrackets = brackets.pop();
-                if (!lastBrackets || lastBrackets !== bracketCloseIndex) {
+                if (lastBrackets === undefined || lastBrackets !== bracketCloseIndex) {
                     return false;
                 }
             }
