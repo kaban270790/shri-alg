@@ -7,9 +7,10 @@
 <body>
 <script>
     let bubbleSort = function (array) {
+        let length = array.length;
         while (true) {
             let hasChange = false;
-            for (let i = 0, l = array.length; i < l; i++) {
+            for (let i = 0, l = length; i < l; i++) {
                 let nextI = i + 1;
                 if (array[nextI] && array[i] > array[nextI]) {
                     hasChange = true;
@@ -18,7 +19,8 @@
                     array[nextI] = curVal;
                 }
             }
-            if (hasChange === false) {
+            length--;
+            if (length <= 0 || hasChange === false) {
                 break;
             }
         }
