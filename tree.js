@@ -5,8 +5,7 @@ const getValues = function (node) {
         return result;
     }
     node.ch.forEach(childNode => {
-        let childResult = getValues(childNode);
-        result = result.concat(childResult);
+        result = result.concat(getValues(childNode));
     });
     return result;
 };
