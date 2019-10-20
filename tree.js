@@ -25,34 +25,34 @@ const getValuesInWidth = function (node) {
     return result;
 };
 
-console.log(getValuesInWidth({
-    val: 1,
-    ch: [
-        {
-            val: 2,
-            ch: [
-                {
-                    val: 4,
-                    ch: [{val: 9}, {val: 10}, {val: 11}]
-                },
-                {
-                    val: 5,
-                }
-            ],
-        },
-        {
-            val: 3,
-            ch: [
-                {
-                    val: 6,
-                },
-                {
-                    val: 7,
-                },
-                {
-                    val: 8,
-                }
-            ],
-        }
-    ],
-}));
+// console.log(getValuesInWidth({
+//     val: 1,
+//     ch: [
+//         {
+//             val: 2,
+//             ch: [
+//                 {
+//                     val: 4,
+//                     ch: [{val: 9}, {val: 10}, {val: 11}]
+//                 },
+//                 {
+//                     val: 5,
+//                 }
+//             ],
+//         },
+//         {
+//             val: 3,
+//             ch: [
+//                 {
+//                     val: 6,
+//                 },
+//                 {
+//                     val: 7,
+//                 },
+//                 {
+//                     val: 8,
+//                 }
+//             ],
+//         }
+//     ],
+// }));
