@@ -21,7 +21,8 @@ const checkBrackets = function (str) {
     return brackets.length === 0;
 };
 
-console.log('(asdasd)', checkBrackets('(asdasd)'));
-console.log('([])', checkBrackets('([])'));
-console.log('([]])', checkBrackets('([]])'));
-console.log('([)', checkBrackets('([)'));
+// console.log('(asdasd)', checkBrackets('(asdasd)'));
+// console.log('([])', checkBrackets('([])'));
+// console.log('([]])', checkBrackets('([]])'));
+// console.log('([)', checkBrackets('([)'));
+//
