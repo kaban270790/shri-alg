@@ -19,4 +19,3 @@ let bubbleSort = function (array) {
     }
     return array;
 };
-console.log('bubbleSort');
