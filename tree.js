@@ -11,7 +11,22 @@ const getValues = function (node) {
 };
 
 
-console.log(getValues({
+const getValuesInWidth = function (node) {
+    const result = [];
+    const begin = function (node) {
+        if (node.ch) {
+            node.ch.forEach(nodeChild => {
+                result.push(nodeChild.val);
+            });
+            node.ch.forEach(begin);
+        }
+    };
+    result.push(node.val);
+    begin(node);
+    return result;
+};
+
+console.log(getValuesInWidth({
     val: 1,
     ch: [
         {
