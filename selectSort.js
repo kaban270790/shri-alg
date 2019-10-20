@@ -9,7 +9,7 @@ let selectSort = function (array) {
             }
         }
         length--;
-        if (maxIndex !== i) {
+        if (maxIndex !== length) {
             let lastVal = array[length];
             array[length] = max;
             array[maxIndex] = lastVal;
@@ -17,4 +17,4 @@ let selectSort = function (array) {
     }
     return array;
 };
-console.log(selectSort([1, 4, 6, 8, 0, 2]));
+console.log(selectSort([5, 1, 3, 2, 4]));
