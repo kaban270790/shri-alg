@@ -17,4 +17,3 @@ let selectSort = function (array) {
     }
     return array;
 };
-console.log(selectSort([5, 1, 3, 2, 4]));
