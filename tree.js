@@ -13,16 +13,15 @@ const getValues = function (node) {
 
 const getValuesInWidth = function (node) {
     const result = [];
-    const begin = function (node) {
+    let nodes = [];
+    nodes.push(node);
+    for (let i = 0; i < nodes.length; i++) {
+        let node = nodes[i];
         if (node.ch) {
-            node.ch.forEach(nodeChild => {
-                result.push(nodeChild.val);
-            });
-            node.ch.forEach(begin);
+            nodes = nodes.concat(node.ch)
         }
-    };
-    result.push(node.val);
-    begin(node);
+        result.push(node.val);
+    }
     return result;
 };
 
@@ -34,6 +33,7 @@ console.log(getValuesInWidth({
             ch: [
                 {
                     val: 4,
+                    ch: [{val: 9}, {val: 10}, {val: 11}]
                 },
                 {
                     val: 5,
