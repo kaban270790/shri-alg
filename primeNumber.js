@@ -1,6 +1,5 @@
 const getPrimeNumber = function (number) {
     let result = [];
-    let ii = 0;
     for (let i = 2; i < number; i++) {
         if (i > 10 && ((i % 2) === 0 || (i % 10) === 5 || (i % 3) === 0 || (i % 5) === 0 || (i % 7) === 0)) {
             continue;
@@ -11,7 +10,6 @@ const getPrimeNumber = function (number) {
             l = Math.ceil(Math.sqrt(i));
         }
         for (let j = 2; j < l; j++) {
-            ii++;
             if ((i % j) === 0) {
                 isDel = true;
                 break;
@@ -21,7 +19,6 @@ const getPrimeNumber = function (number) {
             result.push(i);
         }
     }
-    console.log(ii);
     return result;
 };
 
