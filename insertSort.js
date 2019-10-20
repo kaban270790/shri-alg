@@ -14,4 +14,3 @@ const insertSort = function (array) {
     }
     return array;
 };
-console.log(insertSort([50, 10, 30, 20, 40]));
