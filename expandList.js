@@ -1,18 +1,14 @@
 const expandList = function (node) {
-    let nodes = [];
-    const pushNode = function (node) {
-        nodes.push(node);
-        if (node.next) {
-            pushNode(node.next);
+    const swap = function (node) {
+        if (!node.next) {
+            return node;
         }
+        let child = swap(node.next);
+        node.next.next = node;
+        delete node.next;
+        return child;
     };
-    pushNode(node);
-    let newNode;
-    for (let i = 0, l = nodes.length; i < l; i++) {
-        nodes[i].next = newNode ? newNode : undefined;
-        newNode = nodes[i];
-    }
-    return newNode;
+    return swap(node);
 };
 
 console.log(expandList({
