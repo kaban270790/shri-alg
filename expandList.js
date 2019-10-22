@@ -1,17 +1,20 @@
 const expandList = function (node) {
-    const swap = function (node) {
-        if (!node.next) {
-            return node;
+    let prevNode, nextNode = node.next, currNode = node;
+    while (nextNode) {
+        if (prevNode) {
+            currNode.next = prevNode;
+        } else {
+            delete currNode.next;
         }
-        let child = swap(node.next);
-        node.next.next = node;
-        delete node.next;
-        return child;
-    };
-    return swap(node);
+        prevNode = currNode;
+        currNode = nextNode;
+        nextNode = currNode.next;
+    }
+    currNode.next = prevNode;
+    return currNode;
 };
 
-console.log(expandList({
+console.log('---', expandList({
     val: 5,
     next: {
         val: 8,
